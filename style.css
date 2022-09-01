@@ -1,0 +1,264 @@
+@font-face {
+    font-family: Ubuntu-Regular;
+    src: url(font/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+    font-family: Ubuntu-Bold;
+    src: url(font/Ubuntu-Bold.ttf);
+}
+
+@font-face {
+    font-family: Ubuntu-BoldItalic;
+    src: url(font/Ubuntu-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: Ubuntu-MediumItalic;
+    src: url(font/Ubuntu-MediumItalic.ttf);
+}
+
+:root {
+    --bouton: #148cee;
+    --fond: #47414127;
+    --border: #33303002;
+    --texte: #000000;
+    --texte2: #4e5052;
+    --contenue: #ffffff;
+    --nuance: #0fce5f49;
+    --conflit: #fa080891;
+    --regle: #4dfa08b7;
+    --suspendu: #f6fa08a9;
+    --lien: #5108fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    min-height: 100vh;
+    overflow-y: auto;
+    font-family: Ubuntu-Regular, sans-serif;
+    background: var(--fond);
+}
+
+.main {
+    position: relative;
+    max-width: 1500px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.top-menu {
+    display: flex;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--contenue);
+}
+
+.logo {
+    position: relative;
+    width: 100px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.logo img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.lien {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lien li {
+    list-style: none;
+    margin-right: 10px;
+}
+
+.lien li a {
+    font-size: 13px;
+    color: var(--lien);
+    text-decoration: none;
+}
+
+.contenu {
+    position: relative;
+    width: 100%;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 10px;
+}
+
+.contenu .desc-yahoo {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.desc-yahoo .containt {
+    position: relative;
+    max-width: 500px;
+    float: right;
+}
+
+.desc-yahoo h3 {
+    font-size: 18px;
+    color: var(--texte);
+    font-weight: 600;
+}
+
+.desc-yahoo p {
+    font-size: 14px;
+    color: var(--texte2);
+    margin-top: 15px;
+}
+
+.contenu .connexion {
+    position: relative;
+    width: 280px;
+    height: 350px;
+    background-color: var(--contenue);
+    border: 1px var(--fond) solid;
+    box-shadow: 3px 2px 5px var(--texte2);
+    padding: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.logo-co {
+    position: relative;
+    width: 100px;
+    height: 60px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.logo-co img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.connexion h2 {
+    font-size: 16px;
+    color: var(--texte);
+    font-weight: 600;
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+.connexion p {
+    font-size: 11px;
+    color: var(--texte);
+    text-align: center;
+}
+
+.form-connexion {
+    position: relative;
+    width: 100%;
+    top: 20px;
+}
+
+.zone-saisie {
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-bottom: var(--texte2) solid 1px;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.btnco {
+    height: 40px;
+    border-radius: 20px;
+    width: 100%;
+    border: none;
+    background-color: var(--bouton);
+    color: var(--contenue);
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.souvenir {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkbox {
+    position: relative;
+    border: 1px solid var(--texte2);
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+}
+
+.souvenir span {
+    font-size: 12px;
+    color: var(--lien);
+}
+
+.forgot {
+    text-decoration: none;
+    color: var(--lien);
+    font-size: 13px;
+}
+
+
+/* Design responsive */
+
+@media(max-width:550px) {
+    .contenu {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .desc-yahoo {
+        visibility: hidden;
+    }
+    .contenu .connexion {
+        margin: auto;
+        margin-top: -100px;
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width:510px) {
+    .contenu .connexion {
+        margin-top: -120px;
+    }
+}
+
+@media(max-width:380px) {
+    .contenu .connexion {
+        margin-top: -150px;
+    }
+}
+
+@media(max-width:350px) {
+    .contenu .connexion {
+        margin-top: -170px;
+    }
+}
